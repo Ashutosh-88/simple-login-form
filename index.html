@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Simple Login Form</title>
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css"
+    />
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body>
+    <div class="wrapper">
+      <form
+        action="login.php"
+        class="box"
+        method="post"
+        onsubmit="return login()"
+      >
+        <h1>Log in</h1>
+
+        <!-- Username -->
+        <div class="username">
+          <label for="username">
+            <input
+              type="text"
+              name="username"
+              placeholder="Enter Username"
+              id="username"
+              autocomplete="on"
+              oninput="usernameValidation()"
+            />
+            <i class="far fa-envelope" aria-hidden="true"></i>
+          </label>
+        </div>
+        <div class="error"></div>
+
+        <!-- Password -->
+        <div class="password">
+          <label for="password">
+            <input
+              type="password"
+              name="password"
+              placeholder="Enter Password"
+              id="password"
+              autocomplete="on"
+              oninput="passwordValidation()"
+            />
+            <button class="btn-pwd" onclick="togglePassword()">
+              <i class="fas fa-lock" id="locker-icon"></i>
+            </button>
+          </label>
+        </div>
+        <div class="error"></div>
+
+        <!-- Button -->
+        <button id="btn" type="submit" onclick="login()">Login</button>
+      </form>
+    </div>
+    <script src="script.js"></script>
+  </body>
+</html>
