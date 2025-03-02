@@ -1,4 +1,4 @@
-# Simple Login Form
+# Login Form
 
 ![Preview_SimpleLoginForm](./images/previewSimpleLoginForm.png)
 
